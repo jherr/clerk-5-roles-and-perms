@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "e1031e73-9ae8-47b2-843c-f3b200b5e032",
+  "id": "c8bbade0-dbed-4deb-864d-0b5912b3335e",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "shows": {
@@ -11,6 +11,13 @@
           "name": "id",
           "type": "integer",
           "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "orgId": {
+          "name": "orgId",
+          "type": "text",
+          "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },
@@ -56,6 +63,13 @@
           "name": "id",
           "type": "integer",
           "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "orgId": {
+          "name": "orgId",
+          "type": "text",
+          "primaryKey": false,
           "notNull": true,
           "autoincrement": false
         },

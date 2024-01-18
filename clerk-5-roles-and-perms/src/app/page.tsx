@@ -13,13 +13,13 @@ export default function Home() {
 
   const addShowAction = async (showId: number, name: string, image: string) => {
     "use server";
-    const { userId, has } = auth();
-    if (userId && has({ permission: "org:show:create" })) {
-      await addShow(userId, showId, name, image);
+    const { userId, orgId, has } = auth();
+    if (orgId && userId && has({ permission: "org:show:create" })) {
+      await addShow(orgId, userId, showId, name, image);
     }
     return {
-      shows: await getShows(),
-      votes: userId ? await getVotes(userId) : [],
+      shows: orgId ? await getShows(orgId) : [],
+      votes: userId && orgId ? await getVotes(orgId, userId) : [],
     };
   };
 
@@ -30,13 +30,13 @@ export default function Home() {
     }[]
   ) => {
     "use server";
-    const { userId, has } = auth();
-    if (userId && has({ permission: "org:vote:create" })) {
-      await updateVotes(userId, votes);
+    const { userId, orgId, has } = auth();
+    if (orgId && userId && has({ permission: "org:vote:create" })) {
+      await updateVotes(orgId, userId, votes);
     }
     return {
-      shows: await getShows(),
-      votes: userId ? await getVotes(userId) : [],
+      shows: orgId ? await getShows(orgId) : [],
+      votes: userId && orgId ? await getVotes(orgId, userId) : [],
     };
   };
 

@@ -12,19 +12,21 @@ const connection = drizzle(sqlite, {
 
 migrate(connection, { migrationsFolder: "drizzle" });
 
-export async function getShows() {
+export async function getShows(orgId: string) {
   return await connection.query.shows.findMany({
+    where: eq(shows.orgId, orgId),
     orderBy: [asc(shows.order)],
   });
 }
 
-export async function getVotes(userId: string) {
+export async function getVotes(orgId: string, userId: string) {
   return await connection.query.votes.findMany({
-    where: eq(votes.userId, userId),
+    where: and(eq(votes.userId, userId), eq(votes.orgId, orgId)),
   });
 }
 
 export async function addShow(
+  orgId: string,
   userId: string,
   showId: number,
   name: string,
@@ -32,7 +34,7 @@ export async function addShow(
 ) {
   const show = await connection
     .insert(shows)
-    .values({ showId, name, image })
+    .values({ orgId, showId, name, image })
     .onConflictDoNothing()
     .execute();
 
@@ -44,25 +46,31 @@ export async function addShow(
 
   await connection
     .insert(votes)
-    .values({ showId, userId, order: votesForUser.length })
+    .values({ showId, userId, order: votesForUser.length, orgId })
     .execute();
 
-  await updateShowOrder();
+  await updateShowOrder(orgId);
 
   return show;
 }
 
-export async function updateShowOrder() {
+export async function updateShowOrder(orgId: string) {
   const showVotes: Record<number, number> = {};
 
-  const allShows = await connection.query.shows.findMany().execute();
+  const allShows = await connection.query.shows
+    .findMany({
+      where: eq(shows.orgId, orgId),
+    })
+    .execute();
   for (const { showId } of allShows) {
     showVotes[showId] = 0;
   }
 
   const showCount = Object.keys(showVotes).length;
 
-  const votes = await connection.query.votes.findMany();
+  const votes = await connection.query.votes.findMany({
+    where: eq(shows.orgId, orgId),
+  });
   for (const vote of votes) {
     showVotes[vote.showId] =
       (showVotes[vote.showId] || 0) + (showCount - vote.order);
@@ -82,6 +90,7 @@ export async function updateShowOrder() {
 }
 
 export async function updateVotes(
+  orgId: string,
   userId: string,
   votingOrder: {
     showId: number;
@@ -96,11 +105,11 @@ export async function updateVotes(
   for (const vote of votingOrder) {
     await connection
       .insert(votes)
-      .values({ ...vote, userId })
+      .values({ ...vote, userId, orgId })
       .execute();
   }
 
-  await updateShowOrder();
+  await updateShowOrder(orgId);
 
   return show;
 }
