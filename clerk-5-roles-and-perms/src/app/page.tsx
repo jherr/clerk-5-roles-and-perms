@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import { auth } from "@clerk/nextjs/server";
 
 import MainPage from "./components/MainPage";
@@ -6,11 +5,7 @@ import MainPage from "./components/MainPage";
 import { addShow, getShows, getVotes, updateVotes } from "@/db";
 
 export default function Home() {
-  const { userId, orgId } = auth();
-
-  if (!userId) {
-    redirect("/sign-in");
-  }
+  const { orgId } = auth().protect();
 
   if (!orgId) {
     return <div>No organization</div>;
@@ -18,7 +13,7 @@ export default function Home() {
 
   const addShowAction = async (showId: number, name: string, image: string) => {
     "use server";
-    const { has } = auth();
+    const { userId, has } = auth();
     if (userId && has({ permission: "org:show:create" })) {
       await addShow(userId, showId, name, image);
     }
@@ -35,7 +30,7 @@ export default function Home() {
     }[]
   ) => {
     "use server";
-    const { has } = auth();
+    const { userId, has } = auth();
     if (userId && has({ permission: "org:vote:create" })) {
       await updateVotes(userId, votes);
     }

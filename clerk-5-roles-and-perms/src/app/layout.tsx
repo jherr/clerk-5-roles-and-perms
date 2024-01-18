@@ -24,11 +24,9 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { userId }: { userId: string | null } = auth();
+  const { userId, sessionClaims } = auth();
   const shows = await getShows();
   const votes = userId ? await getVotes(userId) : [];
-
-  const { sessionClaims } = auth();
 
   return (
     <ClerkProvider>

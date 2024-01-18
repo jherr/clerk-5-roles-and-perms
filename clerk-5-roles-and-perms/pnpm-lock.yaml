@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@clerk/nextjs':
-    specifier: canary
-    version: 5.0.1-canary.v434a96e(eslint@8.56.0)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
+    specifier: 5.0.0-alpha-v5.19
+    version: 5.0.0-alpha-v5.19(eslint@8.56.0)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
   '@radix-ui/react-dialog':
     specifier: ^1.0.5
     version: 1.0.5(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
@@ -117,11 +117,11 @@ packages:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  /@clerk/backend@1.0.1-canary.v434a96e(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-1tTNGdmCwVEznnAo6fGkrye0lskV04rKNoSPmOyng4gx9qZYZM3EcEF3mIVzVotsbjwEIrurKlVvvEWl6FuALg==}
+  /@clerk/backend@1.0.0-alpha-v5.17(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ecfWPpnFwn9OWZ6EN963lzc2DTH0P1vz0MsFioDLw/2OWYBqvRhd6OKDSCFZx99EvqtXHfAKhcjBSRfcz/3hNg==}
     engines: {node: '>=18.17.0'}
     dependencies:
-      '@clerk/shared': 2.0.1-canary.v434a96e(react-dom@18.2.0)(react@18.2.0)
+      '@clerk/shared': 2.0.0-alpha-v5.10(react-dom@18.2.0)(react@18.2.0)
       cookie: 0.5.0
       snakecase-keys: 5.4.4
       tslib: 2.4.1
@@ -130,15 +130,15 @@ packages:
       - react-dom
     dev: false
 
-  /@clerk/clerk-react@5.0.1-canary.v434a96e(eslint@8.56.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-tE4AHH6pZ4k/9EL4a1CS1K1CPicS9kjKD/eVlkAXY/xXYiecRiDjhqfFe71CigJdmGdUgk3XyM0sUNb+IGUlmA==}
+  /@clerk/clerk-react@5.0.0-alpha-v5.16(eslint@8.56.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-drO1FX+Kq6bVBZAsAIrn/2iEPz+Y6wG9ms+J0EVA4B+gRPGlPW6DkApObMlaYi9nrXN5Zpnc68aOo/k+nFw7gg==}
     engines: {node: '>=18.17.0'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
     dependencies:
-      '@clerk/shared': 2.0.1-canary.v434a96e(react-dom@18.2.0)(react@18.2.0)
-      '@clerk/types': 4.0.1-canary.v434a96e
+      '@clerk/shared': 2.0.0-alpha-v5.10(react-dom@18.2.0)(react@18.2.0)
+      '@clerk/types': 4.0.0-alpha-v5.12
       eslint-config-custom: 0.0.0(eslint@8.56.0)(typescript@5.3.3)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -151,17 +151,17 @@ packages:
       - typescript
     dev: false
 
-  /@clerk/nextjs@5.0.1-canary.v434a96e(eslint@8.56.0)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-fiA/2z3tmbNPqz9fd5J5YK7Ni5/ym3q1sLH4ir1MiMz4vb5Oaqo2B+h/9NHaLS5JWvrHIUz/6d1pTaTXJxCb5Q==}
+  /@clerk/nextjs@5.0.0-alpha-v5.19(eslint@8.56.0)(next@14.0.4)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-ltvDciW16/6wzz27sfEinP/bpAUgBvGy4F0ADI3ZVRX4ZtZMZnc6fdE61THZVCQ+59TUPUk2MW3ti+1VFi2Epg==}
     engines: {node: '>=18.17.0'}
     peerDependencies:
       next: ^13.0.4 || ^14.0.3
       react: '>=18'
       react-dom: '>=18'
     dependencies:
-      '@clerk/backend': 1.0.1-canary.v434a96e(react-dom@18.2.0)(react@18.2.0)
-      '@clerk/clerk-react': 5.0.1-canary.v434a96e(eslint@8.56.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
-      '@clerk/shared': 2.0.1-canary.v434a96e(react-dom@18.2.0)(react@18.2.0)
+      '@clerk/backend': 1.0.0-alpha-v5.17(react-dom@18.2.0)(react@18.2.0)
+      '@clerk/clerk-react': 5.0.0-alpha-v5.16(eslint@8.56.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
+      '@clerk/shared': 2.0.0-alpha-v5.10(react-dom@18.2.0)(react@18.2.0)
       next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
       path-to-regexp: 6.2.1
       react: 18.2.0
@@ -173,8 +173,8 @@ packages:
       - typescript
     dev: false
 
-  /@clerk/shared@2.0.1-canary.v434a96e(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-eRvnl2CaOe8qkK4+3mRQdGyJ3C/3DI9VeYfw+6no5BFvsBM9/poGO/2QflE/biiGyTsNmRjRzTazWtEd6eh1Jg==}
+  /@clerk/shared@2.0.0-alpha-v5.10(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-3HYP26jun0HZTTvJB911DzLzDTfbam4BBxrorJ3cdtVpG1mWDV6qVmcXNhNnhpLUftf+mVv2sfem6A6zm6M+qA==}
     engines: {node: '>=18.17.0'}
     requiresBuild: true
     peerDependencies:
@@ -194,8 +194,8 @@ packages:
       swr: 2.2.0(react@18.2.0)
     dev: false
 
-  /@clerk/types@4.0.1-canary.v434a96e:
-    resolution: {integrity: sha512-6xS6Pj8Y894sCStBrWI+wS/k4BBFXYyRG4m9byOMtuB6losSFtYi5txJNtqendX/s/aL9/irziWb6HyZ6yyMWQ==}
+  /@clerk/types@4.0.0-alpha-v5.12:
+    resolution: {integrity: sha512-gG1km59jpU38Me2cQRcxINk7mf3W7R+NtwCooNuWXMZmuWcRNp0wpOOpTH/LbxcxhDDUef490mbkzvZJc+qYNg==}
     engines: {node: '>=18.17.0'}
     dependencies:
       csstype: 3.1.1
@@ -2552,7 +2552,7 @@ packages:
       eslint: 8.56.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.29.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(eslint@8.56.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@2.7.1)(eslint@8.56.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.56.0)
       eslint-plugin-react: 7.33.2(eslint@8.56.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.56.0)
@@ -2577,7 +2577,7 @@ packages:
       eslint: 8.56.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+      eslint-plugin-import: 2.29.1(eslint@8.56.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.56.0)
       eslint-plugin-react: 7.33.2(eslint@8.56.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.56.0)
@@ -2614,7 +2614,7 @@ packages:
     dependencies:
       debug: 4.3.4
       eslint: 8.56.0
-      eslint-plugin-import: 2.29.1(eslint@8.56.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@2.7.1)(eslint@8.56.0)
       glob: 7.2.3
       is-glob: 4.0.3
       resolve: 1.22.8
@@ -2634,7 +2634,7 @@ packages:
       enhanced-resolve: 5.15.0
       eslint: 8.56.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+      eslint-plugin-import: 2.29.1(eslint@8.56.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.2
       is-core-module: 2.13.1
@@ -2645,6 +2645,36 @@ packages:
       - eslint-import-resolver-webpack
       - supports-color
     dev: true
+
+  /eslint-module-utils@2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@2.7.1)(eslint@8.56.0):
+    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      '@typescript-eslint/parser': '*'
+      eslint: '*'
+      eslint-import-resolver-node: '*'
+      eslint-import-resolver-typescript: '*'
+      eslint-import-resolver-webpack: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/parser':
+        optional: true
+      eslint:
+        optional: true
+      eslint-import-resolver-node:
+        optional: true
+      eslint-import-resolver-typescript:
+        optional: true
+      eslint-import-resolver-webpack:
+        optional: true
+    dependencies:
+      '@typescript-eslint/parser': 5.62.0(eslint@8.56.0)(typescript@5.3.3)
+      debug: 3.2.7
+      eslint: 8.56.0
+      eslint-import-resolver-node: 0.3.9
+      eslint-import-resolver-typescript: 2.7.1(eslint-plugin-import@2.29.1)(eslint@8.56.0)
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /eslint-module-utils@2.8.0(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
     resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
@@ -2702,9 +2732,9 @@ packages:
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
-    dev: false
+    dev: true
 
-  /eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0):
+  /eslint-plugin-import@2.29.1(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-typescript@2.7.1)(eslint@8.56.0):
     resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -2714,7 +2744,7 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 6.15.0(eslint@8.56.0)(typescript@5.3.3)
+      '@typescript-eslint/parser': 5.62.0(eslint@8.56.0)(typescript@5.3.3)
       array-includes: 3.1.7
       array.prototype.findlastindex: 1.2.3
       array.prototype.flat: 1.3.2
@@ -2723,7 +2753,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.56.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.15.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@5.62.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@2.7.1)(eslint@8.56.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -2737,7 +2767,7 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
-    dev: true
+    dev: false
 
   /eslint-plugin-import@2.29.1(eslint@8.56.0):
     resolution: {integrity: sha512-BbPC0cuExzhiMo4Ff1BTVwHpjjv28C5R+btTOGaCRC7UEz801up0JadwkeSk5Ued6TG34uaczuVuH6qyy5YUxw==}
@@ -2771,7 +2801,7 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
-    dev: false
+    dev: true
 
   /eslint-plugin-jsx-a11y@6.8.0(eslint@8.56.0):
     resolution: {integrity: sha512-Hdh937BS3KdwwbBaKd5+PLCOmYY6U4f2h9Z2ktwtNKvIdIEu137rjYbcb9ApSbVJfWxANNuiKTD/9tOKjK9qOA==}
