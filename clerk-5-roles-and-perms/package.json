@@ -11,7 +11,7 @@
     "migrate": "pnpm drizzle-kit generate:sqlite"
   },
   "dependencies": {
-    "@clerk/nextjs": "5.0.0-alpha-v5.19",
+    "@clerk/nextjs": "5.0.0-beta-v5.20",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-slot": "^1.0.2",
     "@tanstack/react-query": "^5.14.6",
